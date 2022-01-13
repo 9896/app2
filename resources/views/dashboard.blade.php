@@ -4,7 +4,7 @@
         Add Task
     </x-slot>
 
-    <div class="flex flex-col items-center justify-center h-screen">
+    <div class="flex flex-col items-center justify-center h-screen px-8">
 
         <!-- Task list page button -->
         <a href="{{ route('tasklist') }}"
@@ -58,7 +58,7 @@
                 <div class="md:w-2/3">
                     <button type="submit"
                         class="shadow bg-teal-500 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded">
-                        Add
+                        Add Task
                     </button>
                 </div>
             </div>
