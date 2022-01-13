@@ -11,13 +11,33 @@
 |
 */
 
-Route::group(['prefix' => 'task'], function() {
+// Route::group(['prefix' => 'task'], function() {
 
-    // The controllers live in src/Services/Task/Http/Controllers
-    // Route::get('/', 'UserController@index');
+//     // The controllers live in src/Services/Task/Http/Controllers
+//     // Route::get('/', 'UserController@index');
 
-    Route::get('/', function() {
-        return view('task::welcome');
-    });
+//     Route::get('/', function() {
+//         return view('task::welcome');
+//     });
+
+// });
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+
+Route::middleware(['auth'])->group(function () {
+
+    Route::get('/dashboard', function(){
+           return view('dashboard');
+    })->name('dashboard');
+
+    Route::get('/task-list', [TaskController::class, 'get'])->name('tasklist');
+
+    Route::post('/add-task', [TaskController::class, 'add']);
 
 });
+
+require __DIR__.'/auth.php';
+
