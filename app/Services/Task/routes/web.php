@@ -1,5 +1,6 @@
 <?php
 
+use App\Services\Task\Http\Controllers\TaskController;
 /*
 |--------------------------------------------------------------------------
 | Service - Web Routes
@@ -39,5 +40,5 @@ Route::middleware(['auth'])->group(function () {
 
 });
 
-require __DIR__.'/auth.php';
+//require __DIR__.'/auth.php';
 
