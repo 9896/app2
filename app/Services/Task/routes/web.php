@@ -12,16 +12,7 @@ use App\Services\Task\Http\Controllers\TaskController;
 |
 */
 
-// Route::group(['prefix' => 'task'], function() {
 
-//     // The controllers live in src/Services/Task/Http/Controllers
-//     // Route::get('/', 'UserController@index');
-
-//     Route::get('/', function() {
-//         return view('task::welcome');
-//     });
-
-// });
 
 Route::get('/', function () {
     return view('welcome');
